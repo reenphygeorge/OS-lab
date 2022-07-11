@@ -143,18 +143,23 @@ int main()
 		scanf("%d", &block_size[i]);
 	}
 	
-	temp_block_generate(n_block, block_size, temp_block_size);
 	
 	// First Fit //
+	temp_block_generate(n_block, block_size, temp_block_size);
 	first_fit(temp_block_size, n_block, n_process, p);
+	printf("\nFirst Fit\n");
 	print_process(n_process, p);
 	
 	// Best Fit //
+	temp_block_generate(n_block, block_size, temp_block_size);
 	best_fit(temp_block_size, n_block, n_process, p);
+	printf("\nBest Fit\n");
 	print_process(n_process, p);
 	
 	// Worst Fit //
+	temp_block_generate(n_block, block_size, temp_block_size);
 	worst_fit(temp_block_size, n_block, n_process, p);
+	printf("\nWorst Fit\n");
 	print_process(n_process, p);
 	
 	return 0;	
